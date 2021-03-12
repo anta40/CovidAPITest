@@ -88,13 +88,14 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject obj = jsonArray.getJSONObject(i);
 
-                ModelData modelData = new ModelData(jsonObject.getString("Country"),
-                        jsonObject.getString("TotalConfirmed"),
-                        jsonObject.getString("NewConfirmed"),
-                        jsonObject.getString("TotalDeaths"),
-                        jsonObject.getString("NewDeaths"),
-                        jsonObject.getString("TotalRecovered"),
-                        jsonObject.getString("NewRecovered"));
+                ModelData modelData = new ModelData(obj.getString("Country"),
+                        obj.getString("TotalConfirmed"),
+                        obj.getString("NewConfirmed"),
+                        obj.getString("TotalDeaths"),
+                        obj.getString("NewDeaths"),
+                        obj.getString("TotalRecovered"),
+                        obj.getString("NewRecovered"));
+
                 dataArrayList.add(modelData);
             }
 
